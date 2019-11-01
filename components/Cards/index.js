@@ -43,6 +43,10 @@ function makeCard(articleObject) {
   )
 
   //Adding class
+  // const requiredClasses = ['card', 'headline', 'author', 'img-container'];
+  // const [parentDiv, headlineDiv, authorDiv, imageDiv] = requiredClasses.map(
+  //   element => 
+  // )
   parentDiv.classList.add('card');
   headlineDiv.classList.add('headline');
   authorDiv.classList.add('author');

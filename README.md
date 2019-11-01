@@ -30,13 +30,24 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+A: THe DOM is a representation of the the contents of a webpage as a logical tree or node where each element is a node      and represents a branch of the entire document. It is the way a browser parses information from sent from a             server and a way for us to interact with the webpage dynamically. 
+
 2. What is an event?
+
+A: Events are the actions users perform while interacting with  web page like mouse actions, key movements, etc.
 
 3. What is an event listener?
 
+A: Event listener is a special attributes we can add to specific elements which implements a callback function when the
+   specified event is performed on the specified element/node by the user.
+
 4. Why would we convert a NodeList into an Array?
 
+A: A nodelist does not have the full range of methods and properties built into an array. So to be able to work more        dynamically with a nodelist, we convert it into a native array object.
+
 5. What is a component?
+
+A: A component is a reusable block of code where we can dynamically create html elements, add some css styling and        javascript functions to it.
 
 ### Git Set up
 

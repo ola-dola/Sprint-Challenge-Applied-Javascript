@@ -31,7 +31,7 @@ function Tab(topic) {
 
   //Adding to DOM
   const topicsTab = document.querySelector('.topics');
-  topicsTab.appendChild(div);
+  return topicsTab.appendChild(div);
 }
 
 getTopics(Tab);

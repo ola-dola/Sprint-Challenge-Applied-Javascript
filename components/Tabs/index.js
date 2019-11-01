@@ -23,4 +23,15 @@ function getTopics(callback) {
 
 }
 
+function Tab(topic) {
+  const div = document.createElement('div');
+  div.classList.add('tab');
 
+  div.textContent = topic;
+
+  //Adding to DOM
+  const topicsTab = document.querySelector('.topics');
+  topicsTab.appendChild(div);
+}
+
+getTopics(Tab);

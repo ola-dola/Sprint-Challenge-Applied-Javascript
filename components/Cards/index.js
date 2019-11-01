@@ -18,14 +18,23 @@
 //
 // Create a card for each of the articles and add the card to the DOM.
 
-axios.get('https://lambda-times-backend.herokuapp.com/articles')
-  .then(response => {
-    // console.log(response.data);
-    console.log(Object.key(response.data.articles));
-  })
-  .catch(error => {
-    console.log(error.message);
-})
+function getArticles(callback) {
+  axios.get('https://lambda-times-backend.herokuapp.com/articles')
+    .then(response => {
+      // console.log(response.data);
+      // console.log(Object.values(response.data.articles));
+      const articlesArray = Object.values(response.data.articles);
+
+      articlesArray.map(element => {
+        for (i = 0; i < element.length; i++) {
+          callback(element[i]);
+        }
+      })
+    })
+    .catch(error => {
+      console.log(error.message);
+    })
+}
 
 function makeCard(articleObject) {
   const requiredElements = ['div', 'div', 'div', 'div', 'img', 'span'];
@@ -34,10 +43,10 @@ function makeCard(articleObject) {
   )
 
   //Adding class
-  parentDiv.classList.add('.card');
-  headlineDiv.classList.add('.headline');
-  authorDiv.classList.add('.author');
-  imageDiv.classList.add('.img-container');
+  parentDiv.classList.add('card');
+  headlineDiv.classList.add('headline');
+  authorDiv.classList.add('author');
+  imageDiv.classList.add('img-container');
   
   //textContent and src
   headlineDiv.textContent = articleObject.headline;

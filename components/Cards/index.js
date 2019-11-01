@@ -62,3 +62,5 @@ function makeCard(articleObject) {
   const container = document.querySelector('.cards-container');
   return container.appendChild(parentDiv);
 }
+
+getArticles(makeCard);
